@@ -1,0 +1,223 @@
+/*Importando fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Crimson Text", sans-serif;
+}
+/*Definindo as cores que vou utilizar*/
+:root {
+
+    --black: #060606;
+    --blackGrey: #161616;
+    --boardBlue: #243B97;
+}
+
+html, body {
+    width: 100%; /*Define para html e body o espaço que pode utilizar na tela*/
+    overflow-x: hidden; /*Se o conteudo transbordar ele esconde, sem barra de rolagem em baixo*/
+    background-color: var(--blackGrey);
+    color:white;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #060606;
+    justify-content:space-between;/*Com isso cada item fica em um canto*/
+    align-items: center;
+    text-align: center;
+}
+
+.iconLogo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.iconLogo img{
+    width:35%
+}
+
+.inputGroup{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 8px 16px 8px 8px;
+    background-color: var(--blackGrey);
+    border-radius: 20px;
+    gap:20px
+}
+
+.inputField {
+    color: white;
+    font-size: 17px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.inputIcon img{
+    margin-top: 7px;
+    margin-left: 10px;
+    width: 30px;
+}
+
+/*Configurando o menu de navegação*/
+nav{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+}
+
+/*Configurando os itens na lista (icones)*/
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list #userIcon {
+    width: 45px;
+}
+
+.nav-list #shopIcon {
+    width: 45px;
+}
+
+.nav-list #uploadIcon {
+    width: 45px;
+ 
+}
+.nav-list li {
+    margin-left: 40px
+}
+
+/*Ajustando o png destaque (Procurar outra fonte e fazer text?)*/
+.banner{
+    padding: 100px;
+    text-align: center; /*Mesmo que seja "text-align" ele alinha imagem*/
+}
+.banner img {
+    width: 20%;
+}
+/*grid onde vai ficar as camisetas*/
+.productList{
+    background-color: var(--black);
+    height:auto;
+    padding: 50px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 50px;
+}
+
+.productCard{
+    /*Alterando texto*/
+    color: white;
+    font-size: 20px;
+
+    /*Alterando molde*/
+    display:grid;
+    columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--blackGrey);
+    border-color: var(--boardBlue);
+    border-style:solid;
+    border-radius: 20px;
+    width: 300px;
+    padding: 30px;
+    height: 550px;
+    align-items: center;
+}
+/*Ajustando o tamanho das imagens. Desta forma elas se alinham no container.*/
+
+.productImgCard img {
+    max-width: 200px;
+}
+
+/*Estilizando botões*/
+button {
+    background-color: var(--blackGrey);
+    border: 1px solid black;
+    
+    color: white;
+    font-size: 18px;
+    
+    padding: 15px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: backgroud-color 0.2s, border-color 0.2s, transform 0.1s;   
+}
+
+button:hover {
+    background-color: #2c2f33;
+    border-color: #3c3c3c;     
+}
+
+button:active {
+  transform: scale(0.97); 
+  background-color: var(--blackGrey);
+}
+
+/*Footer*/
+footer{
+    width: 100%;
+    color: white;
+    background-color: var(--black);
+    height: auto;
+    margin-top: 10px;
+}
+/*O conteudo em geral que tem no Footer*/
+#footerContent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem;
+}
+
+/*Organizando a escrita*/
+#footerContacts h1 {
+    margin-bottom: 0.75rem;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+/*Organizando os links com imagem*/
+#footerSocialMedia {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content:center;
+    align-items: center;
+}
+
+#youtube img{
+    max-width: 30px;
+}
+
+#github img{
+    max-width: 100%;
+}
+
+/*Organizando a lista*/
+.footerList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.footerList .footerLink {
+    color: white;
+    font-size: 20px;
+}

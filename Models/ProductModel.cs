@@ -1,5 +1,6 @@
 ﻿namespace VillenStore._NET_Version.Models
 {
+    //Criação do modelo de produto;
     public class ProductModel
     {
         public int Id { get; set;}

@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<ProductModel>
 
-<div class="text-center">
-    <h1 class="display-4">Vai toma no cu piranhaa</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <div class="banner"><img src="icons/Produtos!.png" alt="banner"></div>
+    <div class="productList">
+    
+        @if(Model != null)
+        {
+            @foreach(var product in Model)
+            {
+                <div class="productCard">
+                    <div class="productImgCard">
+                        <img class="productImg" src="@product.ImgUrl" alt="productImg">
+                    </div>
+
+                    <div class="productCardInfos">
+                        <p id="productDescr"> @product.Type @product.Name</p>
+                        <p id="productPrice">@product.Price</p>
+                    </div>
+
+                    <div class="buttonAdd">
+                        <button 
+                            id="addToCart" 
+                            onclick="addToCartList(@product.Id, @product.ImgUrl, @product.Type, @product.Name, @product.Price)">Adicionar no carrinho
+                        </button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <script src="~/js/cartList.js"></script>
+</body>
