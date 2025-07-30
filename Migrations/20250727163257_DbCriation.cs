@@ -30,7 +30,7 @@ namespace VillenStore._NET_Version.Migrations
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        {   
             migrationBuilder.DropTable(
                 name: "Products");
         }

@@ -20,8 +20,8 @@ namespace VillenStore._NET_Version.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<ProductModel> productsList = _db.Products.ToList();
-            return View(productsList);
+            IEnumerable<ProductModel> ProductsList = _db.Products.ToList();
+            return View(ProductsList);
         }
         public IActionResult Privacy()
         {

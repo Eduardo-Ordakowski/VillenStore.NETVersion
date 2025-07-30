@@ -32,7 +32,7 @@ function showInfo()
 
     function addToCartList(index, img, type, name, price) 
     {   
-        const existInCart = cartList.findIndex(item => item.cartProductIndex     === index);
+        const existInCart = cartList.findIndex(item => item.cartProductIndex=== index);
             
             if(existInCart !== -1)
             {
