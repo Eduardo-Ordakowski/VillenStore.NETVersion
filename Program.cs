@@ -12,6 +12,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+var SupportedCultures = new[] { "pt-BR" };
+var LocalizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(SupportedCultures[0])
+    .AddSupportedCultures(SupportedCultures)
+    .AddSupportedUICultures(SupportedCultures);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +30,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseRequestLocalization(LocalizationOptions);
 
 app.UseRouting();
 

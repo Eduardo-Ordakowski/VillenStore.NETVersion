@@ -22,6 +22,6 @@ namespace VillenStore._NET_Version.Models
         // Armazenando a imagem do produto;
         [NotMapped]
         [DisplayName("Image")]
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
     }
 }
